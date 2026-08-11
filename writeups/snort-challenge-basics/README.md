@@ -146,5 +146,3 @@ echo "<STRING_BASE64_AQUI>" | base64 -d
 - Fluxo de troubleshooting de regras: validar sintaxe → testar contra PCAP → cruzar com `tcpdump` pra confirmar manualmente.
 
 ---
-
-*Writeup por [Pedro Carvalho](https://github.com/carvsec) — parte da trilha de estudos em SOC/Cybersecurity.*
