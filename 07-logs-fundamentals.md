@@ -1,6 +1,6 @@
 # Logs Fundamentals & Centralization — TryHackMe
 
-**Data:** 10/08/2026 | **Categoria:** Defensive Security
+**Data:** 09/08/2026 | **Categoria:** Defensive Security
 
 ## O que aprendi
 Logs são a matéria-prima de qualquer investigação em SOC. Sem log centralizado, não tem como provar o que aconteceu nem correlacionar eventos entre fontes diferentes.

@@ -1,6 +1,6 @@
 # Linux Fundamentals — TryHackMe
 
-**Data:** 11/08/2026 | **Categoria:** Linux Basics
+**Data:** 10/07/2026 | **Categoria:** Linux Basics
 
 ## O que aprendi
 Compreendi o ambiente Linux, a interação com o sistema via linha de comando, navegação básica (pwd, ls, cd) e manipulação de arquivos (cat, head, tail). Aprofundei em permissões de sistema (rwx) e execução com sudo. Gerenciei processos (ps, top), serviços (systemctl), armazenamento (df, free) e automação (cron).

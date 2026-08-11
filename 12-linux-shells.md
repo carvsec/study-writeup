@@ -1,6 +1,6 @@
 # Linux Shells — TryHackMe
 
-**Data:** 11/08/2026 | **Categoria:** Command Line
+**Data:** 15/07/2026 | **Categoria:** Command Line
 
 ## O que aprendi
 A shell é a camada que interpreta os comandos digitados na CLI e os repassa pro sistema operacional — é o que dá o poder e a flexibilidade de fazer quase qualquer coisa sem depender da GUI. Existem vários tipos de shell (bash, zsh, sh, etc.), cada um com particularidades próprias; o comando `echo $SHELL` mostra qual está em uso na sessão atual. Bash é o padrão e mais usado na maioria das distros Linux.
