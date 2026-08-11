@@ -1,6 +1,6 @@
 # Snort Challenge — Basics (TryHackMe)
 
-Writeup de laboratório prático sobre criação e depuração de regras IDS com **Snort**, cobrindo detecção de tráfego HTTP/FTP, identificação de arquivos por assinatura (magic bytes), correção de sintaxe de regras e uso de regras externas contra exploits reais (EternalBlue/MS17-010 e Log4Shell).
+Writeup de laboratório prático sobre criação e depuração de regras IDS com **Snort**, cobrindo detecção de tráfego HTTP/FTP, identificação de arquivos por assinatura magic bytes, correção de sintaxe de regras e uso de regras externas contra exploits reais EternalBlue/MS17-010 e Log4Shell.
 
 **Sala:** TryHackMe — Snort Challenge: The Basics
 **Ferramentas:** Snort, tcpdump, base64
@@ -19,7 +19,7 @@ Praticar a escrita de regras Snort do zero, entender a anatomia de uma regra (a�
 |---|---|
 | Rodar regras contra um PCAP, saída no console | `sudo snort -c local.rules -r arquivo.pcap -A console` |
 | Rodar regras e salvar logs no diretório atual | `sudo snort -c local.rules -r arquivo.pcap -A console -l .` |
-| Modo verboso (dump de pacotes/cabeçalhos) | `snort -r arquivo.pcap -X -v` |
+| Modo verboso dump de pacotes/cabeçalhos | `snort -r arquivo.pcap -X -v` |
 | Ler um log já gerado pelo Snort | `snort -r snort.log.<timestamp> -X` |
 
 ---
@@ -58,9 +58,9 @@ Detectar usuário válido aguardando senha (código 331):
 alert tcp any 21 -> any any (msg:"FTP Valid User"; content:"331"; sid:1000004; rev:1;)
 ```
 
-> **Aprendizado:** os códigos de resposta do protocolo FTP (230, 331, 530...) aparecem em texto claro no payload, então dá pra usar `content` para identificar o estado exato da tentativa de autenticação — sem isso, o analista só veria "houve tráfego FTP", não *o que aconteceu* na conexão.
+> **Aprendizado:** os códigos de resposta do protocolo FTP 230, 331, 530 aparecem em texto claro no payload, então dá pra usar `content` para identificar o estado exato da tentativa de autenticação — sem isso, o analista só veria "houve tráfego FTP", não *o que aconteceu* na conexão.
 
-### Task 4 — Identificação de arquivos por assinatura (magic bytes)
+### Task 4 — Identificação de arquivos por assinatura magic bytes
 Arquivos têm uma assinatura binária fixa nos primeiros bytes, independente do nome ou extensão — é isso que a regra procura.
 
 Detectar arquivo PNG:
@@ -69,7 +69,7 @@ Detectar arquivo PNG:
 alert tcp any any -> any any (msg:"PNG File Detected"; content:"|89 50 4E 47 0D 0A 1A 0A|"; sid:1000001; rev:1;)
 ```
 
-Detectar arquivo GIF (header em ASCII):
+Detectar arquivo GIF:
 
 ```
 alert tcp any any -> any any (msg:"GIF File Detected"; content:"GIF89a"; sid:1000002; rev:1;)
@@ -95,20 +95,20 @@ Erros mais comuns encontrados e corrigidos:
 - Direção da regra incompatível (`->` vs `<>`)
 - Valores de `sid` duplicados entre regras
 
-### Task 7 — Regras externas: EternalBlue/MS17-010 (SMB)
-Execução com conjunto de regras externas (não escritas do zero):
+### Task 7 — Regras externas: EternalBlue/MS17-010 SMB
+Execução com conjunto de regras externas:
 
 ```
 sudo snort -c local.rules -r ms-17-010.pcap -A console
 ```
 
-Regra para detectar tentativa de acesso ao compartilhamento administrativo `IPC$` (usado no exploit EternalBlue):
+Regra para detectar tentativa de acesso ao compartilhamento administrativo `IPC$`:
 
 ```
 alert tcp any any -> any any (msg:"SMB IPC$ Share Access"; content:"\IPC$"; sid:1000001; rev:1;)
 ```
 
-### Task 8 — Regras externas: Log4Shell (Log4j)
+### Task 8 — Regras externas: Log4Shell
 Detecção por tamanho de payload, já que o exploit tem uma faixa de tamanho característica:
 
 ```
