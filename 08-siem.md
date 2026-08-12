@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# SIEM Fundamentals
-=======
 # SIEM Fundamentals 
->>>>>>> 91376999036ce1e686ad653ab3d4cf9f1410b4f4
 
 **Data:** 10/08/2026 | **Categoria:** Security Solutions
 
