@@ -1,4 +1,4 @@
-# Snort Challenge — Basics (TryHackMe)
+# Snort Challenge — Basics 
 
 Writeup de laboratório prático sobre criação e depuração de regras IDS com **Snort**, cobrindo detecção de tráfego HTTP/FTP, identificação de arquivos por assinatura magic bytes, correção de sintaxe de regras e uso de regras externas contra exploits reais EternalBlue/MS17-010 e Log4Shell.
 
