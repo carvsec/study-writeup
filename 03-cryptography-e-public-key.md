@@ -1,4 +1,4 @@
-# Cryptography Basics & Public Key Cryptography — TryHackMe
+# Cryptography Basics & Public Key Cryptography 
 
 **Data:** 03/08/2026 | **Categoria:** Cryptography
 
@@ -21,4 +21,4 @@ Também pratiquei a operação XOR aplicada como cifra simétrica simples (C = P
 - [Cryptography Basics — TryHackMe](https://tryhackme.com/room/cryptographybasics)
 - [Public Key Cryptography Basics — TryHackMe](https://tryhackme.com/room/publickeycrypto)
 
-Notas completas de estudo disponíveis sob consulta.
+
