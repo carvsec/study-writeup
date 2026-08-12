@@ -9,7 +9,7 @@ Writeup de laboratório prático sobre criação e depuração de regras IDS com
 
 ## Objetivo do laboratório
 
-Praticar a escrita de regras Snort do zero, entender a anatomia de uma regra (ação, protocolo, direção, opções) e usar Snort em modo IDS contra arquivos `.pcap` para identificar tráfego malicioso ou suspeito — desde tráfego bruto até exploração de vulnerabilidades conhecidas.
+Praticar a escrita de regras Snort do zero, entender a anatomia de uma regra ação, protocolo, direção, opções e usar Snort em modo IDS contra arquivos `.pcap` para identificar tráfego malicioso ou suspeito — desde tráfego bruto até exploração de vulnerabilidades conhecidas.
 
 ---
 
@@ -40,19 +40,19 @@ Detectar todo tráfego TCP na porta 21:
 alert tcp any any <> any 21 (msg:"FTP Traffic"; sid:1000001; rev:1;)
 ```
 
-Detectar tentativa de login falha (código de resposta FTP 530):
+Detectar tentativa de login falha código de resposta FTP 530:
 
 ```
 alert tcp any 21 -> any any (msg:"FTP Failed Login"; content:"530"; sid:1000002; rev:1;)
 ```
 
-Detectar login bem-sucedido (código 230):
+Detectar login bem-sucedido código 230:
 
 ```
 alert tcp any 21 -> any any (msg:"FTP Successful Login"; content:"230"; sid:1000003; rev:1;)
 ```
 
-Detectar usuário válido aguardando senha (código 331):
+Detectar usuário válido aguardando senha código 331:
 
 ```
 alert tcp any 21 -> any any (msg:"FTP Valid User"; content:"331"; sid:1000004; rev:1;)
@@ -140,7 +140,7 @@ echo "<STRING_BASE64_AQUI>" | base64 -d
 ## Principais aprendizados
 
 - Anatomia de uma regra Snort: `ação | protocolo | IP/porta origem | direção | IP/porta destino (opções)`.
-- Diferença entre detectar **tráfego de um protocolo** (ex: toda porta 21) e detectar **um evento específico dentro do protocolo** (ex: login FTP falho via código 530).
+- Diferença entre detectar **tráfego de um protocolo** (ex: toda porta 21) e detectar **um evento específico dentro do protocolo** ex: login FTP falho via código 530.
 - Identificação de arquivos por **magic bytes**, útil quando extensão/nome não são confiáveis.
 - Regras podem ser usadas tanto para tráfego genérico quanto para **exploração ativa de vulnerabilidades conhecidas** (EternalBlue, Log4Shell), cruzando `content` e `dsize`.
 - Fluxo de troubleshooting de regras: validar sintaxe → testar contra PCAP → cruzar com `tcpdump` pra confirmar manualmente.
