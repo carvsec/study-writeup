@@ -3,7 +3,7 @@
 **Data:** 10/08/2026 | **Categoria:** Security Solutions
 
 ## O que aprendi
-IDS é passivo (detecta e alerta), IPS é ativo (bloqueia em tempo real). Métodos de detecção: signature-based (rápido, cego a zero-day), anomaly-based (detecta zero-day, mais falso positivo) e hybrid (combina os dois). Deployment em HIDS (por host) ou NIDS (rede toda, visão centralizada).
+IDS é passivo (detecta e alerta), IPS é ativo (bloqueia em tempo real). Métodos de detecção: signature-based, rápido, cego a zero-day, anomaly-based, detecta zero-day, mais falso positivo, e hybrid, combina os dois. Deployment em HIDS, por host, ou NIDS, rede toda, visão centralizada.
 
 ## Prática
 Rodei Snort em modo NIDS pra detectar tráfego ICMP de loopback:

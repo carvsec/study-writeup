@@ -1,4 +1,4 @@
-# Logs Fundamentals & Centralization — 
+# Logs Fundamentals & Centralization
 
 **Data:** 09/08/2026 | **Categoria:** Defensive Security
 
