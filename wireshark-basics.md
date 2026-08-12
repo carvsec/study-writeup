@@ -1,4 +1,4 @@
-# Wireshark: The Basics — TryHackMe
+# Wireshark: The Basics 
 
 **Data:** 30/07/2026 | **Categoria:** Network Analysis
 

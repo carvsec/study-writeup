@@ -1,4 +1,4 @@
-# Firewall Fundamentals — TryHackMe
+# Firewall Fundamentals 
 
 **Data:** 10/08/2026 | **Categoria:** Security Solutions
 
@@ -9,4 +9,4 @@ Os 4 tipos de firewall e onde cada um atua no modelo OSI: **stateless** (filtra 
 Configurei regras básicas em Windows Defender Firewall (GUI) e Linux `iptables` (linha de comando).
 
 ## Referência
-Notas completas de estudo disponíveis sob consulta.
+https://tryhackme.com/room/firewallfundamentals

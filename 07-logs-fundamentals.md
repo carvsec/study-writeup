@@ -1,4 +1,4 @@
-# Logs Fundamentals & Centralization — TryHackMe
+# Logs Fundamentals & Centralization — 
 
 **Data:** 09/08/2026 | **Categoria:** Defensive Security
 
@@ -14,4 +14,4 @@ tail -f /var/log/syslog
 Também analisei Windows Event Logs e Web Server Access Logs pra identificar padrões de tentativa de acesso.
 
 ## Referência
-Notas completas de estudo disponíveis sob consulta.
+https://tryhackme.com/room/logsfundamentals

@@ -1,4 +1,4 @@
-# Linux Fundamentals — TryHackMe
+# Linux Fundamentals 
 
 **Data:** 10/07/2026 | **Categoria:** Linux Basics
 
@@ -29,4 +29,6 @@ crontab -l
 ```
 
 ## Referência
-Notas completas de estudo disponíveis sob consulta.
+https://tryhackme.com/room/linuxfundamentalspart1
+https://tryhackme.com/room/linuxfundamentalspart2
+https://tryhackme.com/room/linuxfundamentalspart3

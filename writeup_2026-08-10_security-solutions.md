@@ -1,4 +1,4 @@
-# Security Solutions + Logs Fundamentals — TryHackMe
+# Security Solutions + Logs Fundamentals 
 
 **Data:** 10/08/2026
 **Categoria:** Defensive Security / Security Solutions

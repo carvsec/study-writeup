@@ -1,4 +1,4 @@
-# SIEM Fundamentals — TryHackMe
+# SIEM Fundamentals — 
 
 **Data:** 10/08/2026 | **Categoria:** Security Solutions
 
@@ -9,4 +9,4 @@ SIEM resolve o problema de "logs everywhere, answers nowhere": agrega, normaliza
 Explorei o fluxo completo de um SIEM: coleta → normalização → correlação → alerta, e o papel do dashboard e do motor de busca/query na investigação forense de logs históricos.
 
 ## Referência
-Notas completas de estudo disponíveis sob consulta.
+https://tryhackme.com/room/introtosiem

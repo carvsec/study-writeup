@@ -1,4 +1,4 @@
-# IDS & IPS Fundamentals — TryHackMe
+# IDS & IPS Fundamentals
 
 **Data:** 10/08/2026 | **Categoria:** Security Solutions
 
@@ -16,4 +16,4 @@ sudo snort -q -l /var/log/snort -r Task.pcap -A alert_fast -c /etc/snort/snort.l
 ```
 
 ## Referência
-Notas completas de estudo disponíveis sob consulta.
+https://tryhackme.com/room/idsfundamentals

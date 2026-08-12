@@ -1,4 +1,4 @@
-# Linux Shells — TryHackMe
+# Linux Shells
 
 **Data:** 15/07/2026 | **Categoria:** Command Line
 
@@ -46,4 +46,4 @@ chmod +x locker_script.sh
 ```
 
 ## Referência
-Notas completas de estudo disponíveis sob consulta.
+https://tryhackme.com/room/linuxshells

@@ -1,4 +1,4 @@
-# Hashing Basics — TryHackMe
+# Hashing Basics 
 
 **Data:** 03/08/2026 | **Categoria:** Cryptography
 
@@ -22,4 +22,4 @@ sha256sum Fedora-Workstation-Live-x86_64-40-1.14.iso
 ```
 
 ## Referência
-Notas completas de estudo disponíveis sob consulta.
+https://tryhackme.com/room/hashingbasics

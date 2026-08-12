@@ -1,4 +1,4 @@
-# Networking Concepts & Essentials — TryHackMe
+# Networking Concepts & Essentials 
 
 **Data:** 20/07/2026 | **Categoria:** Networking Basics
 

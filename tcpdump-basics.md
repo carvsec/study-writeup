@@ -1,4 +1,4 @@
-# Tcpdump: The Basics — TryHackMe
+# Tcpdump: The Basics 
 
 **Data:** 31/07/2026 | **Categoria:** Network Analysis
 

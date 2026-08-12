@@ -1,4 +1,4 @@
-# Networking Core & Secure Protocols — TryHackMe
+# Networking Core & Secure Protocols 
 
 **Data:** 25/07/2026 | **Categoria:** Networking Basics
 
