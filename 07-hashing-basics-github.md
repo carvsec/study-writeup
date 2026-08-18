@@ -1,22 +1,24 @@
-# Hashing Basics
+# Hashing Basics & GitHub Verification — TryHackMe
 
 **Data:** 03/08/2026 | **Categoria:** Cryptography
 
 ## O que aprendi
-Hash é diferente de criptografia — não tem chave e não é reversível, serve pra integridade e verificação de senha, não pra confidencialidade. Qualquer mudança mínima no input muda o output inteiro (efeito avalanche). Aprendi por que senha em plaintext ou hash sem salt é perigoso (rainbow tables) e como salt + algoritmos como Bcrypt/Argon2 resolvem isso. Também vi a diferença entre quebrar hash, testar candidatos até bater, via Hashcat/John the Ripper, e decriptar, não se aplica a hash.
+- **Diferença entre Hash e Criptografia:** o hash não utiliza chave e não é reversível. Sua finalidade é garantir a integridade dos dados e a verificação de senhas, sem focar em confidencialidade.
+- **Efeito Avalanche:** qualquer alteração mínima na entrada modifica completamente a saída gerada.
+- **Segurança de Senhas:** armazenar senhas em texto puro ou utilizar hash sem salt é vulnerável a ataques de tabela rainbow. O uso de salt combinado a algoritmos como Bcrypt e Argon2 previne essa fragilidade.
+- **Quebra vs. Decriptação:** entendi que quebrar um hash consiste em testar candidatos até encontrar uma correspondência com ferramentas como Hashcat e John the Ripper, enquanto a decriptação não se aplica ao conceito de hash.
 
 ## Prática
-Comparei dois arquivos de 1 bit de diferença e confirmei o efeito avalanche:
+Gerei e comparei hashes de dois arquivos praticamente idênticos, com apenas 1 bit de diferença entre eles:
 ```bash
-hexdump -C file1.txt
 hexdump -C file2.txt
 md5sum *.txt
 sha1sum *.txt
 sha256sum *.txt
 ```
-Resultado: mesmo com só 1 bit de diferença no input, os três hashes saíram completamente diferentes entre os dois arquivos.
+Resultado: mesmo com a alteração de apenas um bit no arquivo de entrada, os hashes MD5, SHA1 e SHA256 geraram saídas completamente distintas entre os dois arquivos.
 
-Também verifiquei integridade de arquivo comparando o SHA256 de uma ISO baixada com o hash assinado oficialmente:
+Também verifiquei a integridade de uma imagem ISO comparando o hash SHA256 do arquivo baixado com o hash assinado oficialmente:
 ```bash
 sha256sum Fedora-Workstation-Live-x86_64-40-1.14.iso
 ```

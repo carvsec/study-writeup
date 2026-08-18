@@ -3,26 +3,30 @@
 **Data:** 15/07/2026 | **Categoria:** Command Line
 
 ## O que aprendi
-A shell é a camada que interpreta os comandos digitados na CLI e os repassa pro sistema operacional, é o que dá o poder e a flexibilidade de fazer quase qualquer coisa sem depender da GUI. Existem vários tipos de shell bash, zsh, sh, etc., cada um com particularidades próprias; o comando `echo $SHELL` mostra qual está em uso na sessão atual. Bash é o padrão e mais usado na maioria das distros Linux.
 
-Revisei também a navegação básica pwd, cd, ls e o uso do `grep` pra buscar padrões/palavras dentro de arquivos grandes, essencial pra depois, quando for analisar logs de verdade num SOC.
+**Conceito de Shell:** A shell atua como a interface que interpreta os comandos inseridos no terminal e os envia ao sistema operacional.
 
-A parte principal foi escrever shell scripts: todo script bash começa com um shebang `#!/bin/bash`, que indica ao sistema qual interpretador usar. O arquivo precisa da extensão `.sh` e precisa de permissão de execução `chmod +x` antes de rodar.
+**Tipos de Interpretadores:** Existem variações como Bash, Zsh e Sh, sendo o Bash o padrão na maioria das distribuições Linux. O comando `echo` exibindo a variável `SHELL` indica o interpretador ativo na sessão.
+
+**Filtragem de Dados:** O uso do utilitário `grep` para localizar termos dentro de arquivos extensos é uma habilidade fundamental para análise de logs.
+
+**Automação com Scripts:** Um script em Bash deve ser iniciado com o cabeçalho shebang indicando o caminho do interpretador, salvo com extensão `.sh` e configurado com permissão de execução.
 
 ## Prática
-Vi qual shell estava em uso:
+
+Consultei o interpretador em uso, naveguei pelos diretórios e filtrei uma expressão específica dentro de um arquivo de texto:
+
 ```bash
 echo $SHELL
-```
-
-Naveguei e busquei conteúdo dentro de arquivos:
-```bash
 pwd
 ls -la
 grep "THM" arquivo_grande.txt
 ```
 
-Criei e executei um script simples de autenticação recebe usuário, empresa e PIN, valida e libera acesso:
+**Resultado:** a consulta confirmou o uso do Bash e a busca isolou os registros contendo o padrão pesquisado.
+
+Desenvolvi um script em Bash para autenticação de usuário e validação de PIN:
+
 ```bash
 #!/bin/bash
 echo "Enter your Username: "
@@ -39,11 +43,13 @@ else
 fi
 ```
 
-Dei permissão de execução e rodei:
+Concedi permissão de execução ao arquivo e executei o script no terminal:
+
 ```bash
 chmod +x locker_script.sh
 ./locker_script.sh
 ```
 
-## Referência
-https://tryhackme.com/room/linuxshells
+**Resultado:** o script solicitou as entradas de dados, comparou o valor digitado com a regra condicional e exibiu a mensagem de acesso liberado.
+
+**Referência:** [tryhackme.com/room/linuxshells](https://tryhackme.com/room/linuxshells)
