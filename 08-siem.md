@@ -1,4 +1,4 @@
-# SIEM Fundamentals — TryHackMe
+# SIEM Fundamentals 
 
 **Data:** 10/08/2026 | **Categoria:** Security Solutions
 
