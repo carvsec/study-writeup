@@ -1,4 +1,4 @@
-# Hashing Basics & GitHub Verification — TryHackMe
+# Hashing Basics
 
 **Data:** 03/08/2026 | **Categoria:** Cryptography
 
