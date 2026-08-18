@@ -1,27 +1,29 @@
-# Cryptography Basics & Public Key Cryptography 
+# Cryptography Basics & Public Key Cryptography
 
 **Data:** 03/08/2026 | **Categoria:** Cryptography
 
 ## O que aprendi
 
+Conceitos Fundamentais: Compreendi a terminologia base de criptografia. Plaintext é o dado legível, ciphertext é o dado cifrado, cipher é o algoritmo de conversão e key é a informação secreta que o algoritmo utiliza.  
 
-**Cryptography Basics** cobriu os termos fundamentais: plaintext dado legível, ciphertext dado cifrado, cipher algoritmo de conversão e key a informação secreta que o cipher usa. Vi a diferença entre criptografia simétrica, uma única chave pra cifrar e decifrar, ex: DES, 3DES, AES, e assimétrica, par de chaves pública/privada, ex: RSA, Diffie-Hellman, ECC, além das operações matemáticas usadas por trás XOR e módulo.
+Criptografia Simétrica vs. Assimétrica: A simétrica utiliza uma única chave para cifrar e decifrar os dados, como ocorre no DES, 3DES e AES. Já a assimétrica emprega um par de chaves composta por chave pública e chave privada, como nos algoritmos RSA, Diffie-Hellman e ECC.  
 
-**Public Key Cryptography Basics** aprofundou o porquê da criptografia assimétrica importar: ela não serve só pra confidencialidade, mas principalmente pra **autenticação** confirmar identidade, **autenticidade** confirmar que a mensagem realmente veio de quem diz ter enviado e **integridade** garantir que o dado não foi alterado, enquanto a simétrica foca quase só em confidencialidade. Isso é aplicado na prática em RSA, Diffie-Hellman, SSH, certificados SSL/TLS e PGP/GPG.
+Operações Matemáticas: Estudei a lógica matemática por trás dos algoritmos, com foco nas operações de XOR e cálculo de módulo.  
+
+Aplicações de Chave Pública: A criptografia assimétrica vai além da confidencialidade. Ela garante autenticação para confirmar a identidade, autenticidade para certificar a origem da mensagem e integridade para assegurar que o dado não foi alterado. Isso se aplica na prática no SSH, certificados SSL e TLS, PGP e GPG.  
 
 ## Prática
-Apliquei o conceito de criptografia assimétrica com GPG, par de chaves pública/privada, pra cifrar, decifrar e assinar arquivo:
+
+Apliquei os conceitos de criptografia assimétrica utilizando o GPG com par de chaves para cifrar, decifrar e assinar arquivos:
 
 ```bash
 gpg --import chave_publica.asc
-gpg --encrypt --recipient usuario@email.com arquivo.txt
+gpg --encrypt --recipient user@tryhackme arquivo.txt
 gpg --decrypt arquivo.txt.gpg
 ```
 
-Também pratiquei a operação XOR aplicada como cifra simétrica simples C = P ⊕ K, e P = C ⊕ K pra recuperar o texto original, e cálculo de módulo, que aparecem como base matemática de vários algoritmos assimétricos como RSA.
+Também pratiquei a operação XOR como cifra simétrica simples, utilizando a fórmula C = P XOR K e P = C XOR K para recuperar o texto original. Além disso, trabalhei com cálculo de módulo, que serve de base matemática para algoritmos como o RSA.
 
-## Referência
-- [Cryptography Basics — TryHackMe](https://tryhackme.com/room/cryptographybasics)
-- [Public Key Cryptography Basics — TryHackMe](https://tryhackme.com/room/publickeycrypto)
-
-
+Referência
+https://tryhackme.com/room/cryptographybasics
+https://tryhackme.com/room/publickeycrypto
