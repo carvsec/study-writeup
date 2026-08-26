@@ -1,8 +1,7 @@
 Writeups de Estudo, Segurança Defensiva e SOC
 
 Registro dos meus estudos práticos em segurança, seguindo trilhas do TryHackMe e
-laboratórios próprios. Cada writeup é escrito com minhas próprias palavras, focando
-no raciocínio de análise, não em colar a resposta.
+laboratórios próprios.
 
 👤 Autor: Pedro Carvalho · [LinkedIn](https://www.linkedin.com/in/pedroalvesc/)
 🎯 Objetivo: Analista de SOC evoluindo para Cyber Security Engineer
