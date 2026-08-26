@@ -14,7 +14,7 @@ no raciocínio de análise, não em colar a resposta.
 | Writeup | O que demonstra | MITRE ATT&CK |
 |---|---|---|
 | [Snort Challenge, criação e debug de regras IDS](writeups/snort-challenge-basics) | Escrita de regras Snort, detecção de exploits reais, troubleshooting | T1210 EternalBlue MS17-010, T1190 Log4Shell |
-| << eleve mais 2 ou 3 notas ao nível do Snort e liste aqui >> | | |
+| Neste laboratório escrevi regras de IDS com Snort do zero, cobrindo detecção de tráfego HTTP e FTP, identificação de arquivos por magic bytes e correção de erros de sintaxe. Depois apliquei regras contra capturas de exploits como EternalBlue e Log4Shell, cruzando os alertas com tcpdump e base64 pra confirmar manualmente o que cada regra encontrou. O foco foi entender a anatomia de uma regra e a diferença entre detectar um protocolo e detectar um evento específico dentro dele.| | |
 
 ## 🛡️ Defensive Security e SOC
 - [SOC L1, Alert Triage](23-alert-triage.md)
