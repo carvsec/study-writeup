@@ -4,7 +4,7 @@ Registro dos meus estudos práticos em segurança, seguindo trilhas do TryHackMe
 laboratórios próprios. Cada writeup é escrito com minhas próprias palavras, focando
 no raciocínio de análise, não em colar a resposta.
 
-👤 Autor: Pedro Alves · [LinkedIn](https://www.linkedin.com/in/pedroalvesc/)
+👤 Autor: Pedro Carvalho · [LinkedIn](https://www.linkedin.com/in/pedroalvesc/)
 🎯 Objetivo: Analista de SOC evoluindo para Cyber Security Engineer
 
 ---
